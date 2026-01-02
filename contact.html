@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio | YCSAS Internship</title>
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    }
+    body {
+    
+    scroll-behavior: smooth;
+    }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #000000c0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: top 0.4s ease;
+}
+
+.logo {
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    color: #00adb5;
+}
+.contact {
+    padding: 80px 50px;
+    text-align: center;
+    height: 120vh;
+    align-items: center;
+    background: linear-gradient(to right, #00adb5, #393e46);
+}
+
+.contact h2 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ffd369;
+}
+
+.contact-subtitle {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(226, 131, 16);
+    margin-bottom: 40px;
+    position: relative;
+    left: -100%;
+    white-space: nowrap;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background: #fff;
+    padding: 30px;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card h3 {
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.contact-card a {
+    text-decoration: none;
+    color: #0077b5;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+</style>
+<body>
+    <nav>
+        <div class="logo">My Portfolio</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="internship.html">Internship</a></li>
+        </ul>
+    </nav> 
+    <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p class="contact-subtitle" id="animated-subtitle">
+        Feel free to reach out for collaboration, opportunities, or queries.
+    </p>
+
+    <div class="contact-container">
+
+        <div class="contact-card">
+            <h3>Aranya Sutradhar</h3>
+            <p>📞 <a href="tel:+918420689481">+91 8420689481</a></p>
+            <p>📧 <a href="mailto:sutradhararanya822@gmail.com">sutradhararanya822@gmail.com</a></p>
+        </div>
+
+        <div class="contact-card">
+            <h3>Professional Profiles</h3>
+            <p>💻 <a href="https://github.com/aranya45" target="_blank">GitHub</a></p>
+            <p>🔗 <a href="https://linkedin.com/in/aranya-sutradhar-1aab99389" target="_blank">LinkedIn</a></p>
+        </div>
+
+    </div>
+</section>
+<script>
+    const subtitle = document.getElementById("animated-subtitle");
+
+    let position = -100;   // start from left
+    let speed = 0.10;      // medium speed
+
+    function animateSubtitle() {
+        position += speed;
+
+        if (position > 100) {
+            position = -100; // reset to start
+        }
+
+        subtitle.style.left = position + "%";
+        requestAnimationFrame(animateSubtitle);
+    }
+
+    animateSubtitle();
+    let lastScrollTop = 0;
+    const navbar = document.querySelector("nav");
+
+    window.addEventListener("scroll", function () {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            // Scrolling DOWN → hide navbar
+            navbar.style.top = "-100px";
+        } else {
+            // Scrolling UP → show navbar
+            navbar.style.top = "0";
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+</script>
+</body>
+</html>

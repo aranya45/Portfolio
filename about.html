@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio | YCSAS Internship</title>
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    }
+
+    body {
+    scroll-behavior: smooth;
+    }
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #0000009c;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: top 0.4s ease;
+}
+
+.logo {
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    color: #00adb5;
+}
+
+/* Home Section */
+.home {
+    height: 110vh;
+    background: linear-gradient(to right, #00adb5, #393e46);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 80px 50px;
+    align-items: center;
+}
+.about span{
+    font-size: 40px;
+    color: #ffd369;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    font-size: 22px;
+    width: 70%;
+}
+.about h1{
+    margin-bottom: 10px;
+}
+
+</style>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">My Portfolio</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="internship.html">Internship</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="home" class="home">
+        <div class="about">
+            <h1><span>BACKGROUND</span></h1>
+             <p>
+                I come from a learning-oriented background with a growing passion for technology and web development. I enjoy exploring how websites are structured, designed, and made interactive using modern web technologies. Through self-learning and practice, I have developed a keen interest in creating clean, responsive, and user-focused web interfaces. My curiosity, adaptability, and willingness to learn continuously help me improve my skills and approach every task with dedication and enthusiasm.
+            </p>
+
+            <h1><span>CAREER GOALS</span></h1>
+            <p>
+                My career goal is to become a skilled and innovative web developer who can design and develop user-friendly, responsive, and efficient web applications. I aspire to work in a challenging professional environment where I can apply my technical knowledge, learn from industry experts, and contribute meaningfully to impactful projects. In the long term, I aim to grow as a full-stack developer and stay updated with emerging technologies to deliver high-quality digital solutions.
+            </p>
+
+            <h1><span>Reason for Joining the YCSAS Internship</span></h1>
+            <p>
+                I joined the YCSAS Internship to gain practical exposure and hands-on experience in real-world web development. This internship provides an excellent opportunity to bridge the gap between theoretical knowledge and practical implementation. Through YCSAS, I aim to enhance my technical skills, understand industry standards, work on meaningful projects, and develop professional discipline. I see this internship as a crucial step in shaping my career and building a strong foundation for my future in the tech industry.
+            </p>
+        </div>
+    </section>
+<script>
+    let lastScrollTop = 0;
+    const navbar = document.querySelector("nav");
+
+    window.addEventListener("scroll", function () {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            // Scrolling DOWN → hide navbar
+            navbar.style.top = "-100px";
+        } else {
+            // Scrolling UP → show navbar
+            navbar.style.top = "0";
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio | YCSAS Internship</title>
+</head>
+<style>
+     * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    }
+
+    body {
+    scroll-behavior: smooth;
+    }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #0000009c;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: top 0.4s ease;
+}
+
+.logo {
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    color: #00adb5;
+}
+.intern {
+    height: 110vh;
+    background: linear-gradient(to right, #00adb5, #393e46);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 80px 50px;
+    align-items: center;
+}
+.internship{
+    max-width: 80%;
+    height: 90vh;
+}
+.internship h2{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.internship p{
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.6;
+}
+.internship b{
+    color: burlywood;
+}
+.internship span{
+    color: #ffd369
+}
+</style>
+<body>
+    <nav>
+        <div class="logo">My Portfolio</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="intern" class="intern">
+        <div class="internship">
+            <h2><span>Internship Name</span></h2>
+             <p>
+                YCSAS Internship Program
+            </p>
+
+            <h2><span>Technologies and Topics Learned</span></h2>
+            <p>
+                During the YCSAS Internship, I gained hands-on experience with modern web development tools and technologies, including:
+                <p><b>Html:</b> Creating semantic, well-structured, and accessible web pages.</p>
+                <p><b>CSS:</b> Designing responsive layouts, styling components, and implementing modern UI designs.</p>
+                <p><b>JavaScript:</b> Adding interactivity, animations, and dynamic behavior to websites.</p>
+                <p><b>React:</b> Understanding component-based architecture and building reusable UI components.</p>
+                <p><b>Excalidraw:</b> Planning layouts, wireframes, and user interface designs before development.</p>
+                <p><b>GitHub:</b> Version control, repository management, and collaborative development workflows.</p>
+            </p>
+
+            <h2><span>Experience Gained</span></h2>
+            <p>
+                The YCSAS Internship provided valuable real-world exposure to web development practices and professional workflows. Throughout the internship, I worked on designing and developing responsive web pages, implementing interactive features, and structuring projects efficiently. I learned how to translate design ideas into functional code, follow clean coding practices, and debug issues effectively.
+                Additionally, I gained experience in:
+                Building and managing projects using industry-standard tools
+                Applying best practices for code organization and reusability
+                Understanding the importance of UI/UX planning before development
+                Working with version control systems to track changes and improve collaboration
+                Enhancing problem-solving and logical thinking skills through practical tasks
+                This internship strengthened my technical foundation, improved my confidence as a web developer, and prepared me to work on real-world projects in a professional environment.
+            </p>
+        </div>
+    </section>
+<script>
+    let lastScrollTop = 0;
+    const navbar = document.querySelector("nav");
+
+    window.addEventListener("scroll", function () {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            // Scrolling DOWN → hide navbar
+            navbar.style.top = "-100px";
+        } else {
+            // Scrolling UP → show navbar
+            navbar.style.top = "0";
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+</script>
+</body>
+</html>

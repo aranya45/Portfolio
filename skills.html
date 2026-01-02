@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio | YCSAS Internship</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<style>
+     * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    }
+
+    body {
+    scroll-behavior: smooth;
+    }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #0000009c;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: top 0.4s ease;
+}
+
+.logo {
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    color: #00adb5;
+}
+.skill {
+    height: 160vh;
+    background: linear-gradient(to right, #00adb5, #393e46);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 80px 50px;
+    align-items: center;
+}
+.myskill{
+    max-width: 80%;
+}
+.myskill h3{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 45px;
+    font-weight: bold;
+    color: #ffd369;
+}
+.myskill h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: burlywood
+}
+.myskill p{
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+</style>
+<body>
+    <nav>
+        <div class="logo">My Portfolio</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="internship.html">Internship</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="skill" class="skill">
+        
+        <div class="myskill">
+            <h3><u>MY SKILLS</u></h3>
+
+            <h2><i class="fa-brands fa-html5"></i> HTML(HyperText Markup Language)</h2>
+            <p>
+                I learned how to create well-structured, semantic, and accessible web pages using HTML. This includes organizing content with appropriate tags, improving readability for both users and search engines, and ensuring proper document structure. I also worked with forms, tables, media elements, and learned best practices for writing clean and maintainable markup.
+            </p>
+            <h2><i class="fa-brands fa-css3"></i> CSS(Cascading Style Sheets)</h2>
+            <p>
+                I developed strong skills in styling web pages using CSS to create visually appealing and responsive designs. This includes layout techniques such as Flexbox and Grid, responsive design using media queries, and styling components consistently. I also learned how to use animations, transitions, and hover effects to enhance user experience while maintaining a professional UI design.
+            </p>
+            <h2><i class="fa-brands fa-js"></i> JavaScript</h2>
+            <p>
+                I gained hands-on experience in adding interactivity and dynamic behavior to websites using JavaScript. This includes DOM manipulation, event handling, form validation, basic animations, and controlling page behavior based on user actions. I also learned to write clean and efficient scripts to improve website functionality and user engagement.
+            </p>
+            <h2><i class="fa-brands fa-react"></i> React</h2>
+            <p>
+                I learned the fundamentals of React, focusing on component-based architecture for building scalable and reusable user interfaces. This includes understanding JSX, props, state management, and basic hooks. React helped me improve my ability to structure applications efficiently and develop dynamic, fast, and interactive web applications.
+            </p>
+            <h2><i class="fa-brands fa-github"></i> Git & GitHub</h2>
+            <p>
+                I learned how to use Git for version control, enabling me to track changes, manage code versions, and collaborate effectively. Using GitHub, I gained experience in creating repositories, pushing and pulling code, maintaining project history, and following professional development workflows. This helped me understand collaboration and code management in real-world projects.
+            </p>
+            <h2><i class="fa-solid fa-pencil"></i> Excalidraw(UI Planning & Wireframing)</h2>
+            <p>
+                I used Excalidraw to create wireframes and design layouts before development. This helped me plan user interfaces effectively, visualize ideas, and structure web pages logically. UI planning improved development efficiency and ensured better user experience in final projects.
+            </p>
+        </div>
+
+    </section>
+<script>
+    let lastScrollTop = 0;
+    const navbar = document.querySelector("nav");
+
+    window.addEventListener("scroll", function () {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            // Scrolling DOWN → hide navbar
+            navbar.style.top = "-100px";
+        } else {
+            // Scrolling UP → show navbar
+            navbar.style.top = "0";
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+</script>
+</body>
+</html>

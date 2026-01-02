@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio | YCSAS Internship</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    }
+
+    body {
+    scroll-behavior: smooth;
+    }
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #0000009c;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.logo {
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    color: #00adb5;
+}
+
+/* Home Section */
+.home {
+    height: 100vh;
+    background: linear-gradient(to right, #00adb5, #393e46);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 80px 50px;
+    align-items: center;
+}
+.home-left img{
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+.home-right{
+    margin-left: 40px;
+    max-width: 600px;
+}
+.home-right h1{
+    font-size: 46px;
+}
+.home-right span{
+    color: #ffd369;
+    font-family:'Times New Roman', Times, serif;
+}
+.home-right p{
+    margin-top: 15px;
+    font-size: 22px;
+    line-height: 1.6;
+    text-align: justify;
+}
+#welcome{
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background-color: #0d1ad5;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 1s ease;
+    z-index: 1000;
+}
+</style>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">My Portfolio</div>
+        <ul>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="internship.html">Internship</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="home-left">
+            <img src="aaaa.jpeg" alt="Profile Picture">
+        </div>
+        <div class="home-right">
+            <h1>Hello, I'm <span>Aranya Sutradhar</span></h1>
+             <p>
+                I am a Computer Science student and a passionate learner with a strong interest in 
+                technology and problem-solving. This portfolio showcases my technical skills, projects 
+                I have worked on, and the knowledge I gained during my internship at <b>YCSAS Pvt. Ltd</b>. 
+                Through hands-on experience and continuous learning, I strive to grow as a skilled and 
+                responsible software professional.
+            </p>
+        </div>
+        <div id="welcome">
+            <p>
+                <i class="fa-solid fa-hand-wave"></i> Welcome to my portfolio! Explore my skills, projects and internship experience.
+            </p>
+        </div>
+    </section>
+    <script>
+        window.onload = function(){
+            const box = document.getElementById("welcome");
+            box.style.opacity = '1';
+            setTimeout(() => {
+                box.style.opacity = '0';
+            }, 5000);
+        }
+        
+    </script>
+</body>
+</html>

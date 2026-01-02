@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio | YCSAS Internship</title>
+</head>
+<style>
+     * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    }
+
+    body {
+    scroll-behavior: smooth;
+    }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #0000009c;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: top 0.4s ease;
+}
+
+.logo {
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    color: #00adb5;
+}
+.project {
+    height: 150vh;
+    background: linear-gradient(to right, #00adb5, #393e46);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 80px 50px;
+    align-items: center;
+}
+.mypro {
+    max-width: 80%;
+}
+.mypro h3{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+.mypro h3 u{
+    color: #ffd369;
+}
+.mypro h2{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: burlywood;
+}
+.mypro p{
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+</style>
+<body>
+    <nav>
+        <div class="logo">My Portfolio</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="internship.html">Internship</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="project" class="project">
+        <div class="mypro">
+            <h3><u>Tasks provided by YCSAS</u></h3>
+            <h2>Task 1: Pushing Code to GitHub</h2>
+            <p>
+                In this task, I learned how to use Git and GitHub for version control and project management. I created a GitHub repository, initialized it with Git, and successfully pushed my project code. This task helped me understand repository creation, commit practices, tracking changes, and maintaining project versions. It also introduced me to professional development workflows and the importance of using version control in real-world projects.
+            </p>
+            <h2>Task 2: Simple Website Development</h2>
+            <p>
+                For this task, I designed and developed a simple website using HTML, CSS, and basic JavaScript. The website included structured content, basic styling, and navigation. Through this task, I learned how to organize web pages, apply styling for better visual appearance, and understand the basic flow of web development from structure to design.
+            </p>
+            <h2>Task 3: Registration Form</h2>
+            <p>
+                In this task, I created a functional registration form using HTML and CSS, with basic validation using JavaScript. The form included fields such as name, email, password, and contact details. I learned how to design user-friendly forms, validate user input, and ensure proper data collection. This task improved my skills in form handling, input validation, and improving user experience.
+            </p>
+            <h2>Task 4: To-Do List using DOM Manipulation</h2>
+            <p>
+                For this task, I developed a dynamic to-do list application using JavaScript and DOM manipulation. Users could add, edit, and delete tasks interactively. This project helped me understand how JavaScript interacts with HTML elements, how to handle events, and how to update the user interface dynamically without reloading the page. It significantly strengthened my logical thinking and problem-solving skills.
+            </p>
+            <h2>Task 5: Portfolio Website</h2>
+            <p>
+                In the final task, I designed and developed a complete personal portfolio website to showcase my skills, projects, and internship experience. The portfolio included sections such as About Me, Skills, Projects, Internship Details, and Contact Information. I focused on creating a responsive, visually appealing, and user-friendly design. This task allowed me to integrate all the technologies learned during the internship and present my work in a professional manner.
+            </p>
+        </div>
+    </section>
+<script>
+    let lastScrollTop = 0;
+    const navbar = document.querySelector("nav");
+
+    window.addEventListener("scroll", function () {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            // Scrolling DOWN → hide navbar
+            navbar.style.top = "-100px";
+        } else {
+            // Scrolling UP → show navbar
+            navbar.style.top = "0";
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+</script>
+</body>
+</html>
